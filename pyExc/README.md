@@ -1,9 +1,9 @@
-# MeasureTool
-Adds a measure object to scene.
+# pyExc
+CSV table script to:
+- swap first name and last name
+- set lower case
+- set title case
  
-1. Install script
-2. Find the script here:<br/>
-![](https://github.com/marcin-em/MeasureTool/blob/master/m1.jpg)
-3. Press "Generate" and enter desired height<br/>
-4. Created measure object:<br/>
-![](https://github.com/marcin-em/MeasureTool/blob/master/m2.jpg)
+1. Open your CSV file, make sure to set all names in first column
+2. Edit</br>
+![](https://github.com/marcin-em/Portfolio/blob/master/pyExc/img/pyexc.jpg)
