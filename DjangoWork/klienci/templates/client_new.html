@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<form method='POST' action='.'> {% csrf_token %}
+    <!--{{ form }}-->
+    {% if form.errors %}
+        <p>Client already exists</p>
+    {% endif %}
+    <div class='forms'>
+        <p>Nazwa firmy</p>
+        {{ form.client_name }}
+        <p>Kontakt</p>
+        {{ form.client_contact }}
+        <p>Info</p>
+        {{ form.client_info }}
+        <input class="login-input" type="submit" value="{{ commit }}">
+    </div>
+</form>
+{% endblock %}

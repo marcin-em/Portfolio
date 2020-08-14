@@ -1,0 +1,16 @@
+{% load static %}
+<header>
+    <div id=logo>DjangoWork</div>
+    <a href="#" class="hide-desktop"></a>
+    <img src="{% static 'img/ham.svg' %}" style="width: 25px; height: 25px;" class="menu" id="menu">
+    <ul class="show-desktop hide-mobile" id="nav">
+        {% if request.user.is_staff %}
+            <li id="exit" class="exit-btn"><img src="{% static 'img/exit.svg' %}" style="width: 25px; height: 25px;"</li>
+            <li><a href="/projects">Projekty</a></li>
+            <li><a href="/clients">Klienci</a></li>
+            <li><a href="/logout">Wyloguj ({{ user }})</a></li>
+        {% else %}
+            <li><a>Zaloguj się</a></li>
+        {% endif %}
+    </ul>
+</header>

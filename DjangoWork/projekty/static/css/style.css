@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+*:focus {
+    outline: none;
+}
+
+
+.project{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+
+.project a{
+    font-family: Montserrat;
+    font-weight: 300;
+}
+
+.project a:link{
+    color: black;
+    text-decoration: none;
+}
+.project a:visited{
+    color: black;
+    text-decoration: none;
+}
+.project a:hover{
+    color: rgb(0, 174, 255);
+    text-decoration: underline;
+}
+.project a:active{
+    color: black;
+    text-decoration: none;
+}
+
+
+body{
+    background-color: #f4f4f4;
+}
+
+.label{
+    height: auto;
+    margin: auto;
+    text-align: center;
+}
+
+.main{
+    width: calc(100% - 100px);
+    margin: 0 auto;
+}
+
+.container{
+    background-color: #dbdbdb;
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/*------ NAV ------*/
+
+header{
+    background: rgb(0, 174, 255);
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo{
+    color: white;
+    font-size: 30px;
+    font-family: Montserrat;
+    font-weight: 700;
+}
+/*
+header ul{
+    align-self: flex-end;
+}*/
+header a{
+    color: white;
+    font-family: Montserrat;
+    font-weight: 500;
+    text-decoration: none;
+}
+header li{
+    display: inline;
+    margin-left: 30px;
+}
+
+/*------/ NAV ------*/
+
+h1{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+p{
+    font-family: Montserrat;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+/*------ MAIN ------*/
+
+.utilities{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.add-project{
+    background-color: rgb(0, 174, 255);
+    flex-shrink: 0;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.edit-project{
+    display: inline-block;
+    background-color: rgb(0, 174, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    
+}
+.edit-project-bkg{
+    background: url('../img/edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+
+
+.project-info{
+    display: flex;
+    padding: 30px 0;
+    justify-content: center;
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+
+
+.project-info div{
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat;
+    line-height: 2em;
+}
+
+.project-info-list1{
+   /*background-color: rgb(0, 255, 34);*/
+   text-align: right;
+   margin-right: 20px;
+}
+
+.project-info-list2{
+    /*background-color: rgb(229, 255, 0);*/
+    font-weight: 700;
+ }
+
+.project:hover{
+    box-shadow: 0px 0px 10px #e0e0e0;
+}
+
+.project div{
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+/*
+.edit_btn{
+    width: 50px;
+    border: none;
+    background: url('../img/edit_16x16.png') no-repeat center;
+    cursor: pointer;
+}
+*/
+.edit_btn{
+    display: inline;
+    border: none;
+    background: url('../img/edit.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    cursor: pointer;
+}
+
+.delete_btn{
+    display: inline;
+    border: none;
+    background: url('../img/delete.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+    cursor: pointer;
+}
+
+/*------/ MAIN ------*/
+
+/*------ LOGIN ------*/
+
+.account{
+    background: url('../img/social-media.png') no-repeat center;
+    background-size: 200px;
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
+}
+
+form{
+    margin: auto;
+    width: 500px;
+}
+
+.forms{
+    display: block;
+}
+
+input, select, textarea{
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+.login-input[type="submit"]{
+    font-weight: 700;
+    color: white;
+    background: yellowgreen;
+    border: none;
+    cursor: pointer;
+}
+
+li{
+    font-family: Montserrat;
+    list-style-type: none;
+}
+
+/* DATES */
+
+#id_project_start_date_day{
+    width: 70px;
+}
+
+#id_project_start_date_month{
+    width: 140px;
+}
+
+#id_project_start_date_year{
+    width: 90px;
+}
+
+.exit-btn{
+    display: none;
+}
+
+.menu{
+    display: none;
+}
+
+ @media (max-width:700px){
+    
+    .show-desktop{
+        display: none;
+    }
+
+    .hide-mobile{
+        display: none;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .main{
+        width: calc(100% - 10px);
+    }
+
+    .exit-btn{
+        display: inline;
+    }
+    
+    .menu{
+        display: inline;
+    }
+ }

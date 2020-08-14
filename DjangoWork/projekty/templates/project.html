@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }} ({{ object.pk }})</h1>
+{% endblock %}
+
+{% block content %}
+<div class="utilities" style="margin-bottom: 15px;">
+    <a href="/project/new">
+        <div class="add-project">
+            <img src="{% static 'img/new_project_white.svg' %}" style="width: 16px; height: 16px; position: absolute; top: 17px; left: 17px;" alt="">
+        </div>
+    </a>
+    <span style="font-family: Montserrat; font-size: 20px; font-weight: 300; color: #7e7e7e; user-select: none; margin-right: 15px;">Dodaj nowy projekt</span>
+
+    <a href="/project/{{ object.pk }}/edit">
+        <div class="add-project">
+            <img src="{% static 'img/edit_white.svg' %}" style="width: 16px; height: 16px; position: absolute; top: 17px; left: 17px;" alt="">
+        </div>
+    </a>
+    <span style="font-family: Montserrat; font-size: 20px; font-weight: 300; color: #7e7e7e; user-select: none; margin-right: 15px;">Edytuj projekt</span>
+</div>
+
+<div class="project-info">
+    <div>
+        <div class="project-info-list1">
+            <ul style="list-style-type: none;">
+                <li>Klient</li>
+                <li>Nazwa projektu</li>
+                <li>Utworzony</li>
+                <li>Rozpoczęty</li>
+                <li>Status</li>
+                <li>Info</li>
+            </ul>
+        </div>
+        <div class="project-info-list2">
+            <ul style="list-style-type: none;">
+                <li>{{ object.client_name }}</li>
+                <li>{{ object.project_name }}</li>
+                <li>{{ object.project_start_date }}</li>
+                <li>{{ object.project_start_date }}</li>
+                <li>{{ object.project_status }}</li>
+                <li style="font-weight: 300;">{{ object.project_info }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

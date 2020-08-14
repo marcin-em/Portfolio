@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }} ({{ object.pk }})</h1>
+{% endblock %}
+
+{% block content %}
+<form>
+    <div class='forms'>
+        <p>Klient</p>
+        <select name="client" id="client">
+            <option value="Klient 1">Klient 1</option>
+            <option value="Klient 2">Klient 2</option>
+            <option value="Klient 3">Klient 3</option>
+        </select>
+
+        <p>Nazwa projektu</p>
+        <input class="login-input" id="project_name" type="text" name="project_name">
+
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 220px;">
+                <p>Rozpoczęty</p>
+                <input type="date" name="project_start" id="project_start">
+            </div>
+            <div style="width: 220px;">
+                <p>Status</p>
+                <select name="project_status" id="project_status">
+                    <option value="ongoing">w trakcie</option>
+                    <option value="check">do sprawdzenia</option>
+                    <option value="closed">zamknięty</option>                    
+                </select>
+            </div>
+        </div>
+
+        <p>Info</p>
+        <textarea name="info" id="project_info" rows="5"></textarea>
+        
+        <input class="login-input" type="submit" value="Utwórz">
+    </div>
+</form>
+{% endblock %}

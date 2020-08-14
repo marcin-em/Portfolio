@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+{% block content %}
+
+<div style="display: flex; align-items: flex-end; justify-content: space-between;">
+    <div class="utilities" style="margin-bottom: 15px;">
+        <a href="/project/new">
+            <div class="add-project">
+                <img src="{% static 'img/new_project_white.svg' %}" style="width: 16px; height: 16px; position: absolute; top: 17px; left: 17px;" alt="">
+            </div>
+        </a>
+        <span style="font-family: Montserrat; font-size: 20px; font-weight: 300; color: #7e7e7e; user-select: none; margin-right: 15px;">Dodaj nowy projekt</span>
+    </div>
+</div>
+
+<div class="project" style="color: rgb(180, 180, 180);">
+    <div style="width: 100px; text-align: center;"><p>ID</p></div>
+    <div style="flex: auto; text-align: left;"><p>Nazwa projektu</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>Klient</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>Start</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>Utworzony</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>Utworzył</p></div>
+    {% if request.user.is_staff %}
+        <div class="edit_btn" style="background: none; cursor: default;"></div>
+        {% if request.user.is_superuser %}
+            <div class="delete_btn" style="background: none; cursor: default;"></div>
+        {% endif %}
+    {% endif %}
+</div>
+
+{% for object in object_list  %}
+
+<div class="project">
+    <div style="width: 100px; text-align: center;"><p>{{ object.pk }}</p></div>
+    <div style="flex: auto; text-align: left;"><a href="/project/{{ object.pk }}" style="font-weight: 600; line-height: 1.5em;">{{ object.project_name }}</a></div>
+    <div style="width: 120px;" class="show-desktop"><a href="client.html">{{ object.client_name }}</a></div>
+    <div style="width: 120px;" class="show-desktop"><p>{{ object.project_start_date }}</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>{{ object.project_create_date }}</p></div>
+    <div style="width: 120px;" class="show-desktop"><p>{{ object.user }}</p></div>
+    {% if request.user.is_staff %}
+        <a href="/project/{{ object.pk }}/edit"><div class="edit_btn"></div></a>
+        {% if request.user.is_superuser %}
+            <a href="/project/delete/{{ object.pk }}"><div class="delete_btn"></div></a>
+        {% endif %}
+    {% endif %}  
+</div>
+
+{% endfor  %}
+
+{% endblock  %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<div class="utilities" style="margin-bottom: 15px;">
+    <a href="/client/new">
+        <div class="add-project">
+            <img src="{% static 'img/new_project_white.svg' %}" style="width: 16px; height: 16px; position: absolute; top: 17px; left: 17px;" alt="">
+        </div>
+    </a>
+    <span style="font-family: Montserrat; font-size: 20px; font-weight: 300; color: #7e7e7e; user-select: none; margin-right: 15px;">Dodaj nowego klienta</span>
+
+    <a href="/client/{{ object.pk }}/edit">
+        <div class="add-project">
+            <img src="{% static 'img/edit_white.svg' %}" style="width: 16px; height: 16px; position: absolute; top: 17px; left: 17px;" alt="">
+        </div>
+    </a>
+    <span style="font-family: Montserrat; font-size: 20px; font-weight: 300; color: #7e7e7e; user-select: none; margin-right: 15px;">Edytuj klienta</span>
+</div>
+
+<div class="project-info">
+    <div>
+        <div class="project-info-list1">
+            <ul style="list-style-type: none;">
+                <li>Klient</li>
+                <li>Kontakt</li>
+                <li>Info</li>
+            </ul>
+        </div>
+        <div class="project-info-list2">
+            <ul style="list-style-type: none;">
+                <li>{{ object.client_name }}</li>
+                <li>{{ object.client_contact }}</li>
+                <li style="font-weight: 300;">{{ object.client_info }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

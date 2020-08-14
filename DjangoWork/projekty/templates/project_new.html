@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+<form method='POST' action='.'> {% csrf_token %}
+    <div class='forms'>
+        <p>Klient</p>
+        {{ form.client_name }}
+        <p>Nazwa projektu</p>
+        {{ form.project_name }}
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 320px;">
+                <p>Rozpoczęty</p>
+                    <div style="display: flex; justify-content: space-between;">
+                    {{ form.project_start_date }}
+                    </div>
+            </div>
+            <div style="width: 120px;">
+                <p>Status</p>
+                {{ form.project_status }}
+            </div>
+        </div>
+
+        <p>Info</p>
+        {{ form.project_info }}
+        <input class="login-input" type="submit" value="{{ commit }}">
+    </div>
+</form>
+{% endblock %}

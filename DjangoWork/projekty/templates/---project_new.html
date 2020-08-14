@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<h1>Nowy projekt</h1>
+{% endblock %}
+
+{% block content %}
+<form method='POST' action='.'> {% csrf_token %}
+    <div class='forms'>
+        <p>Klient</p>
+        <select>
+            {% for object in object_list  %}
+            <option>{{ object }}</option>
+            {% endfor  %}
+        </select>
+
+        <p>Nazwa projektu</p>
+        <input class="login-input" id="project_name" type="text" name="{{ project_name }}">
+
+        <div style="display: flex; justify-content: space-between;">
+            <div style="width: 220px;">
+                <p>Rozpoczęty</p>
+                <input type="date" name="project_start" id="project_start" name="{{ project_start_date }}">
+            </div>
+            <div style="width: 220px;">
+                <p>Status</p>
+                <select name="project_status" id="project_status" name="{{ project_status }}">
+                    <option value="ongoing">w trakcie</option>
+                    <option value="check">do sprawdzenia</option>
+                    <option value="closed">zamknięty</option>                    
+                </select>
+            </div>
+        </div>
+
+        <p>Info</p>
+        <textarea name="info" id="project_info" rows="5" name="{{ project_info }}"></textarea>
+        <input class="login-input" type="submit" value="Stwórz">
+    </div>
+</form>
+{% endblock %}

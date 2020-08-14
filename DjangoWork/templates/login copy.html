@@ -1,0 +1,14 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+<div class="account"></div>
+<form method='POST' action='/projects'> {% csrf_token %}
+
+{{ form.as_p }}
+    <div class='forms'>
+        <input class="login-input" type="text" name="login" placeholder="Username">
+        <input class="login-input" type="password" name="password" placeholder="Password">
+        <input class="login-input" type="submit" value="Login">
+    </div>
+</form>
+{% endblock %}
