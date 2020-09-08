@@ -8,7 +8,7 @@ from django.contrib.auth import (
 )
 from .forms import UserLoginForm
 
-#@login_required(login_url='/')
+
 def login_page(request):
     if request.user.is_authenticated:
         return redirect('projects/')

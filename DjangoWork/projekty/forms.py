@@ -22,6 +22,5 @@ class ProjectModelForm(forms.ModelForm):
             'project_info',
         ]
         widgets = {
-            #'project_start_date': DateInput(),
             'project_start_date' : SelectDateWidget(),
         }

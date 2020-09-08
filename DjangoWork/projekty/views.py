@@ -45,7 +45,4 @@ def project_update_view(request, project_id):
 def project_delete_view(request, project_id):
     obj = get_object_or_404(Project, id=project_id)
     obj.delete()
-    #project = Project.objects.get(pk=project_id)
-    #project.delete()
-    #context = {'object': obj}
     return redirect('/')

@@ -1,8 +1,6 @@
 from django import forms
 from django.contrib.auth import authenticate
 
-#class DateInput(forms.DateInput):
-#    input_type = 'date'
 
 class UserLoginForm(forms.Form):
     error_css_class = 'error'
