@@ -89,7 +89,7 @@ class WM_OT_measureOp(bpy.types.Operator):
                     # txt
                     bpy.ops.object.text_add(location=(cur_3d.x, cur_3d.y, (cur_3d.z + (obj * incr))))
                     txt = bpy.context.selected_objects[0]
-                    bpy.ops.transform.rotate(value=1.5708, orient_axis='X', orient_type='GLOBAL')
+                    bpy.ops.transform.rotate(value=-1.5708, orient_axis='X', orient_type='GLOBAL')
 
                     ob = bpy.context.object
                     ob.data.body = '{} m'.format(int(obj/100))
@@ -109,7 +109,7 @@ class WM_OT_measureOp(bpy.types.Operator):
                     # txt
                     bpy.ops.object.text_add(location=(cur_3d.x, cur_3d.y, (cur_3d.z + (obj * incr))))
                     txt = bpy.context.selected_objects[0]
-                    bpy.ops.transform.rotate(value=1.5708, orient_axis='X', orient_type='GLOBAL')
+                    bpy.ops.transform.rotate(value=-1.5708, orient_axis='X', orient_type='GLOBAL')
 
                     ob = bpy.context.object
                     ob.data.body = '{} cm'.format(obj)
