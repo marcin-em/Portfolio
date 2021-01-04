@@ -1,10 +1,6 @@
-# AiLabels
-Automate creating print-ready labels.
+# PyChess
+Command line chess game.
 
-Install:
-Copy .jsx file to: ..\Adobe Illustrator\Presets\en_GB\Scripts
+Font with chess symbols is required (e.g. DejaVu Sans Mono)
 
-Select your art and run the script with File >> Scripts. Script modifies your art with bleed on your bottom object and rasterize art (optional).
-It also creates cut area on another artboard.
-
-![](https://github.com/marcin-em/Portfolio/blob/master/AiLabels/Ailabels.png)
+![](https://github.com/marcin-em/Portfolio/blob/master/PyChess/pychess.png)
