@@ -21,13 +21,14 @@ driver = webdriver.Chrome(PATH, chrome_options=chrome_options)
 
 my_dir = os.getcwd()
 
-KEY = 'wsadwsad'
+KEY = 'YOUR USERNAME'
+PASS = 'YOUR PASSWORD'
 WEB_SIGNIN = 'http://chessebook.com/signin.php?lan=en'
 
 driver.get(WEB_SIGNIN)
 driver.implicitly_wait(5)
 driver.find_element_by_name('username').send_keys(KEY)
-driver.find_element_by_name('password').send_keys(KEY)
+driver.find_element_by_name('password').send_keys(PASS)
 driver.find_element_by_xpath('/html/body/div/div[3]/div/div[2]/div/div/form/div/button').click()
 driver.implicitly_wait(5)
 
