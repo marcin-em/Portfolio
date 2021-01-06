@@ -32,10 +32,11 @@ driver.find_element_by_name('password').send_keys(PASS)
 driver.find_element_by_xpath('/html/body/div/div[3]/div/div[2]/div/div/form/div/button').click()
 driver.implicitly_wait(5)
 
-times = 1
+start_val = 1
+end_val = 20
 index = 1
-while times < 20:
-    URL = f'http://chessebook.com/world_reti.php?lan=en&pos_ID={times}&match=9'
+while start_val < end_val:
+    URL = f'http://chessebook.com/world_reti.php?lan=en&pos_ID={start_val}&match=9'
     driver.get(URL)
     move_list = []
     ok_moves = True
@@ -45,7 +46,7 @@ while times < 20:
             move_list.append(element.text)
             index += 1
         except:
-            print(f'no more moves ({times})')
+            print(f'no more moves ({start_val})')
             index = 1
             break
 
@@ -67,4 +68,4 @@ while times < 20:
         with open('your_file.txt', 'a', encoding="utf-8") as f:
                 f.write('\n')
                 f.close()
-        times += 1
+        start_val += 1
