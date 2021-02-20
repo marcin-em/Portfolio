@@ -51,8 +51,6 @@ def reload():
     print('Produkt niedostepny')
     time.sleep(RELOAD_TIME)
     driver.refresh()
-    engine.say('Odświeżam')
-    engine.runAndWait()
 
 while product_found == False:
 
