@@ -34,12 +34,10 @@ username = driver.find_element_by_name('email')
 password = driver.find_element_by_name('password')
 username.send_keys(EMAIL)
 password.send_keys(PASS)
-login = driver.find_element_by_xpath('/html/body/div[1]/div[1]/div[1]/div/div/div[2]/main/article/div/div/section[1]/form/div[2]/button')
+login = driver.find_element_by_xpath('//*[@id="main"]/article/div/div/div[1]/section/form/div[2]/button/span')
 ActionChains(driver).move_to_element(login).click().perform()
 
-driver.implicitly_wait(5)
 driver.get(URL)
-driver.implicitly_wait(5)
 
 product_found = False
 
@@ -72,7 +70,6 @@ while product_found == False:
     if len(color_btns) > 0:
         for btn in color_btns:
             btn.click()
-            driver.implicitly_wait(5)
             check_prod(1)
             if product_found:
                 break
