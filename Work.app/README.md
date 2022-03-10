@@ -15,4 +15,3 @@ To add a client you need to use Postman - POST localhost:8000/api/clients, Autho
 ![](https://github.com/marcin-em/Portfolio/blob/master/Work.app/img/wa2.jpg)
 ![](https://github.com/marcin-em/Portfolio/blob/master/Work.app/img/wa3.jpg)
 ![](https://github.com/marcin-em/Portfolio/blob/master/Work.app/img/wa4.jpg)
-![](https://github.com/marcin-em/Portfolio/blob/master/Work.app/img/work_app.mp4)
