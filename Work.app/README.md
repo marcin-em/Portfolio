@@ -8,7 +8,8 @@ PHP 8, Laravel 8, React 17
 3. Get into front-react folder and install modules with 'npm install', then start React App with 'npm start'
 4. Go to 'localhost:3000' and play with app
 
-To add a client you need to use Postman - POST localhost:8000/api/clients, Authorization - Bearer Token (copy from your local storage when you first login), Body - 'x-www-form-urlencoded' with KEY = name, VALUE = <your client name>
+Create user with Postman - POST localhost:8000/api/register with Body - KEY = name, VALUE = <your name> and KEY = password, VALUE = <your password>
+Create client - POST localhost:8000/api/clients, Authorization - Bearer Token (copy from your local storage when you first login), Body - 'x-www-form-urlencoded' with KEY = name, VALUE = <your client name>
 
 
 ![](https://github.com/marcin-em/Portfolio/blob/master/Work.app/img/wa1.jpg)
