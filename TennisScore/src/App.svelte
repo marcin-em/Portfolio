@@ -1,7 +1,3 @@
-<!-- TODO -->
-<!-- undo -->
-
-
 <script>
 	import { fade, scale } from 'svelte/transition'
 	import Form from './Form.svelte'
