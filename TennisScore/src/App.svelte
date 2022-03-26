@@ -6,8 +6,6 @@
 	import { fade, scale } from 'svelte/transition'
 	import Form from './Form.svelte'
 	
-	//test
-	let test = 'abcdefgh'
 	test.indexOf('a')
 	let num_of_sets = 3
 	let set = 0
